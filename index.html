@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miku Merch & Peripherals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="login-section" class="card login-card">
+            <h1 class="brand-title"><span class="miku-cyan">Miku</span><span class="miku-pink">Store</span></h1>
+            <p class="subtitle">Tienda de periféricos y merch Vocaloid de Emmanuel Isaí Núñez Cuenca</p>
+            
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Ingresa tu usuario (ej. Emmanuel)">
+                <button onclick="login()" class="btn-primary">Entrar</button>
+            </div>
+        </div>
+
+        <div id="store-section" style="display: none;">
+            <header class="store-header">
+                <h2 class="brand-title"><span class="miku-cyan">Miku</span><span class="miku-pink">Store</span></h2>
+                <div class="user-controls">
+                    <span class="greeting">¡Hola, <span id="user-display" class="miku-cyan font-bold"></span>!</span>
+                    <button onclick="logout()" class="btn-secondary">Cerrar Sesión</button>
+                </div>
+            </header>
+
+            <div class="store-container">
+                <div class="products-section card">
+                    <h3 class="section-title">Periféricos y Coleccionables</h3>
+                    <div id="product-list" class="grid-list"></div>
+                </div>
+
+                <div class="cart-section card">
+                    <h3 class="section-title">Tu Carrito 🛒</h3>
+                    <ul id="cart-items" class="cart-list"></ul>
+                    
+                    <div class="cart-footer">
+                        <p class="total-text">Total: <span class="miku-pink">$<span id="cart-total">0</span></span></p>
+                        <button onclick="checkout()" class="btn-primary checkout-btn">Confirmar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

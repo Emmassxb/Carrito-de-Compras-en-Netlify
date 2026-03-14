@@ -1,0 +1,129 @@
+/* Paleta de colores Miku Pastel */
+:root {
+    --miku-cyan: #39C5BB;
+    --miku-cyan-light: #e0f7f6;
+    --miku-pink: #ff88bb;
+    --miku-pink-light: #ffe6f0;
+    --bg-color: #f4f9f9;
+    --text-main: #4a4a4a;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    background-image: radial-gradient(var(--miku-cyan-light) 2px, transparent 2px);
+    background-size: 30px 30px;
+    margin: 0;
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#app {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tipografía y colores de texto */
+.brand-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 1px;
+}
+.miku-cyan { color: var(--miku-cyan); }
+.miku-pink { color: var(--miku-pink); }
+.font-bold { font-weight: bold; }
+.subtitle { color: #888; font-size: 14px; margin-bottom: 25px; }
+.section-title { color: var(--miku-cyan); border-bottom: 2px dashed var(--miku-cyan-light); padding-bottom: 10px; margin-top: 0; }
+
+/* Tarjetas (Cards) estilo Soft UI */
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(57, 197, 187, 0.1);
+    padding: 30px;
+}
+
+/* Sección Login */
+.login-card {
+    max-width: 400px;
+    margin: 10vh auto;
+    text-align: center;
+}
+.input-group { display: flex; flex-direction: column; gap: 15px; }
+input {
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+input:focus { border-color: var(--miku-cyan); box-shadow: 0 0 0 3px var(--miku-cyan-light); }
+
+/* Botones */
+button {
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.btn-primary { background-color: var(--miku-cyan); color: white; padding: 12px 20px; }
+.btn-primary:hover { background-color: var(--miku-pink); transform: translateY(-2px); }
+.btn-secondary { background-color: var(--miku-cyan-light); color: var(--miku-cyan); padding: 8px 15px; font-size: 12px; }
+.btn-secondary:hover { background-color: var(--miku-pink-light); color: var(--miku-pink); }
+
+/* Layout de la Tienda */
+.store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    padding: 15px 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    margin-bottom: 25px;
+}
+.store-container { display: flex; gap: 25px; flex-wrap: wrap; }
+.products-section { flex: 2; min-width: 300px; }
+.cart-section { flex: 1; min-width: 250px; display: flex; flex-direction: column; }
+
+/* Lista de Productos */
+.grid-list { display: flex; flex-direction: column; gap: 15px; }
+.product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    transition: 0.2s;
+}
+.product-item:hover { border-color: var(--miku-cyan-light); background: var(--white); box-shadow: 0 4px 10px rgba(57, 197, 187, 0.08); }
+.product-info { display: flex; flex-direction: column; }
+.product-name { font-weight: bold; color: var(--text-main); }
+.product-price { color: var(--miku-pink); font-size: 14px; margin-top: 5px; font-weight: bold; }
+
+/* Carrito */
+.cart-list { list-style: none; padding: 0; margin: 0; flex-grow: 1; overflow-y: auto; max-height: 300px; }
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+.btn-remove { background: #ffebee; color: #ff5252; border-radius: 50%; width: 24px; height: 24px; padding: 0; display: flex; justify-content: center; align-items: center; }
+.btn-remove:hover { background: #ff5252; color: white; }
+
+.cart-footer { margin-top: 20px; border-top: 2px dashed #eee; padding-top: 15px; }
+.total-text { font-size: 18px; font-weight: bold; margin-bottom: 15px; text-align: right; }
+.checkout-btn { width: 100%; font-size: 16px; padding: 15px; }
